@@ -9,10 +9,17 @@
 </head>
 <body>
         <style>
-    
+            div.home {
+   -webkit-flex: 1; /* Safari 6.1+ */
+   flex: 1;
+}
                 .home a{
                     color: #ffffff;
-                    text-align: center;
+                    background: red;
+                    border-radius: 50%;
+                    width: 10%;
+                    padding: 0.5%;
+                    text-decoration: none;
                     
                 }
                 body{
@@ -71,7 +78,7 @@
                         transform: rotateX(0deg) rotateY(0deg);
                     }
                     to{
-                        transform: rotateX(360deg) rotateY(360deg)
+                        transform: rotateX(360deg) rotateY(360deg);
                     }
                 }
             
@@ -89,7 +96,12 @@
             <img src="img/cubo7.jpg">
         </div>
     </div>
-    <div class="home">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="home" class="home">
         <a href="index.html">GO TO HOME</a>
     </div>
 </body>
