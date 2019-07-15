@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bar</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Bootstrap js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--iconos-->
+    <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style>
+		body{
+            background: #000;
+            margin: 0;
+            padding: 0;
+            background: #000;
+        }
+        
+	.conteiner{
+		height: 600px;
+		width:90%;
+		margin: 20px auto;
+	cursor: pointer;
+		display: flex;
+	}
+
+	.hijo{
+
+	width: 30%;
+	height: 100%;
+	margin: 0 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	}
+	.hijo:hover .cont-info{
+	
+
+	}
+
+	.cont-info{
+		border-radius: 10px 10px 0 0;
+		overflow: hidden;
+		height: 0;
+		width: 100%;
+		background:  #fff;
+		color: #000;
+		font-family: sans-serif;
+		margin-top:-50px ;
+
+		transition: .5s;
+		margin-bottom: 10px;
+		clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 52% 86%, 50% 75%, 0% 75%);
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	.hijo .bola{
+		height: 30px;
+		width: 30px;
+		position: relative;
+		z-index: 20;
+		border-radius: 50%;
+		margin-top: 350px;
+		margin-left: 20px;
+		position: fixed;
+		box-shadow: 0 0 25px #fff;
+	}
+	.bola1{
+		background:  #2980b9 ;
+	}
+	.bola2{
+		background:  #f44336 ;
+	}
+	.bola3{
+		background:  #f1c40f ;
+	}
+	.imagen{
+		height: 120px;
+		width: 120px;
+		border-radius: 50%;
+		border: 6px solid #333;
+		margin-top: 20px;
+	}
+	.img1{
+		
+		background: url("fondo1.jpg");
+		background-size: cover;
+		
+		
+	}
+	.img2{
+		background: url("fondo3.jpg");
+		background-size: cover;
+		background-position: center;
+	}
+	.img3{
+		background: url("fondo2.jpg");
+		background-size: cover;
+		background-position: center;
+	}
+	.titulo{
+		color:#ccc;
+	}
+	h3{
+		margin-top: -20px;
+	}
+	p{
+		width:90%;
+		margin:0 auto;
+		font-family: normal;
+	}
+
+	.redes{
+		height: 150px;
+		width: 90%;
+		margin: 20px auto;
+		display: flex;
+		
+		flex-direction:row;
+
+	}
+	.redes span{
+		font-size: 25px;
+		border-radius: 50%;
+		height: 38px;
+		width: 42px;
+		border: 2px solid #333;	
+		background: #fff;
+		color: #000;
+		margin: 0 20px;
+		display: flex;justify-content: center;
+		align-items: center;
+	}
+	.redes .facebook{
+		color: blue;
+	}
+	.redes .twitter{
+		color:  #2e86c1 ;
+	}
+	.redes .youtube{
+		color: red;
+	}
+	.redes .instagram{
+		color:  #d35400 ;
+	}
+	/**javascript**/
+
+	.animar{
+		height: 550px;
+	}
+	.animar2{
+		height: 550px;
+	}
+	.animar3{
+		height: 550px;
+	}
+
+	</style>
+</head>
+<body>
+
+    <!-- barra de menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">LAM TURISMO</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+             <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                   <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href="comidas.html">Donde Comemos?</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href="salidas.html">Donde Vamos?</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href="hoteles.html">Donde nos quedamos?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="servicios.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactos.html">Contactanos</a>
+                 </li>
+             </ul>    
+          </div>
+       </nav>
+    
+
+	<div class="conteiner">
+		<div class="hijo item-1">
+			<div class="cont-info info1">
+				<div class="imagen img1"></div>
+				<h2 class="titulo">keyli</h2>
+				<h3 class="titulo">Desarrollador Web</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum facere cum, iure omnis optio veniam ipsam voluptates. Hic reiciendis, dolores, praesentium iusto obcaecati perspiciatis alias ea aut esse eius aliquam.</p>
+				<div class="redes">
+					<span class="facebook fab fa-facebook"></span>
+					<span class="twitter fab fa-twitter"></span>
+					<span class="youtube fab fa-youtube"></span>
+					<span class="instagram fab fa-instagram"></span>
+				</div>
+			</div>
+			<div class="bola1 bola" onclick="funcion1();"></div>
+		</div>
+		<div class="hijo item-2">
+			<div class="cont-info info2" id="info2">
+				<div class="imagen img2"></div>
+				<h2 class="titulo">Junnior Rojas</h2>
+				<h3 class="titulo">Ceo </h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum facere cum, iure omnis optio veniam ipsam voluptates. Hic reiciendis, dolores, praesentium iusto obcaecati perspiciatis alias ea aut esse eius aliquam.</p>
+				<div class="redes">
+					<span class="facebook fab fa-facebook"></span>
+					<span class="twitter fab fa-twitter"></span>
+					<span class="youtube fab fa-youtube"></span>
+					<span class="instagram fab fa-instagram"></span>
+				</div>
+			</div>
+			<div class="bola2 bola" onclick="funcion2();"></div>
+		</div>
+		<div class="hijo item-3">
+			<div class="cont-info info3" id="info3">
+				<div class="imagen img3"></div>
+				<h2 class="titulo">Lizet</h2>
+				<h3 class="titulo">Developer</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum facere cum, iure omnis optio veniam ipsam voluptates. Hic reiciendis, dolores, praesentium iusto obcaecati perspiciatis alias ea aut esse eius aliquam.</p>
+				<div class="redes">
+					<span class="facebook fab fa-facebook"></span>
+					<span class="twitter fab fa-twitter"></span>
+					<span class="youtube fab fa-youtube"></span>
+					<span class="instagram fab fa-instagram"></span>
+				</div>
+			</div>
+			<div class="bola3 bola" onclick="funcion3();"></div>
+		</div>
+	</div>
+	
+
+	<script>
+		function funcion1(){
+			
+			document.querySelector(".info1").classList.toggle("animar")
+		}
+
+		function funcion2(){
+			document.getElementById("info2").classList.toggle("animar")
+		}
+		function funcion3(){
+			document.getElementById("info3").classList.toggle("animar")
+		}
+
+	</script>
+</body>
+</html>

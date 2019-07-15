@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+        <style>
+    
+                .home a{
+                    color: #ffffff;
+                    text-align: center;
+                    
+                }
+                body{
+                    background: #333;
+                }
+            
+                .container{
+                    margin-top: 200px;
+                    perspective: 1000px;
+                    perspective-origin: 50% 50%;
+                }
+            
+                .cubo{
+                    height: 300px;
+                    width: 300px;
+                    transform-style: preserve-3d;
+                    position: relative;
+                    animation: rotar 10s infinite linear;
+                    margin: auto;
+                }
+                
+                
+                .cubo img{
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                }
+            
+                .cubo img:nth-child(1)
+                {
+                    transform:rotateY(0deg) translateZ(150px);
+                }
+                .cubo img:nth-child(2)
+                {
+                    transform:rotateY(90deg) translateZ(150px);
+                }
+                .cubo img:nth-child(3)
+                {
+                    transform:rotateY(180deg) translateZ(150px);
+                }
+                .cubo img:nth-child(4)
+                {
+                    transform:rotateY(-90deg) translateZ(150px);
+                }
+                .cubo img:nth-child(5)
+                {
+                    transform:rotateX(90deg) translateZ(150px);
+                }
+                .cubo img:nth-child(6)
+                {
+                    transform:rotateX(-90deg) translateZ(150px);
+                }
+                
+                @keyframes rotar{
+                    from{
+                        transform: rotateX(0deg) rotateY(0deg);
+                    }
+                    to{
+                        transform: rotateX(360deg) rotateY(360deg)
+                    }
+                }
+            
+            
+            </style>
+    
+    <!--cubo -->
+    <div class="container">
+        <div class="cubo">
+            <img src="img/cubo1.jpg">
+            <img src="img/cubo2.jpg">
+            <img src="img/cubo4.jpg">
+            <img src="img/cubo5.jpg">
+            <img src="img/cubo6.jpg">
+            <img src="img/cubo7.jpg">
+        </div>
+    </div>
+    <div class="home">
+        <a href="index.html">GO TO HOME</a>
+    </div>
+</body>
+</html>
